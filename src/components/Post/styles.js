@@ -5,16 +5,18 @@ const PostContainer_ = styled.section`
   margin: 0 auto 2rem auto;
   max-width: 560px;
 
-  & > a{
+  & a{
+    color: #DC2A2A;
+
     & > h2{
 
       margin: 0;
       color: #DC2A2A;
+    }
 
-      &:hover{
+    &:hover, & h2:hover{
 
-        color: #AA0000;
-      }
+      color: #AA0000;
     }
   }
 

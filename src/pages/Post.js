@@ -7,10 +7,11 @@ import Navigation from '../components/Navigation'
 import Post from '../components/Post'
 import Footer from '../components/Footer'
 
-export default function Template({
+function Template({
   data
 }) {
   const { markdownRemark } = data; // data.markdownRemark holds our post data
+  if( !markdownRemark ) return null;
   const { frontmatter, html, timeToRead } = markdownRemark;
 
   return <App>
@@ -37,3 +38,5 @@ export const pageQuery = graphql`
     }
   }
 `
+
+export default Template

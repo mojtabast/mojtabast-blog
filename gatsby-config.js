@@ -35,7 +35,8 @@ module.exports = {
             options: {
               inlineCodeMarker: '÷',
             },
-          }
+          },
+          'gatsby-remark-copy-linked-files',
         ],
       },
     },
