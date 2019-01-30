@@ -8,7 +8,7 @@ const GlobalStyle = createGlobalStyle`
     text-align: right;
     padding: 0;
     margin: 0;
-    line-height: 1.6;
+    line-height: 1.7;
     font-family: 'Vazir';
   }
 
