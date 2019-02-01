@@ -14,10 +14,11 @@ function Template({
   if( !markdownRemark ) return null;
   const { frontmatter, html, timeToRead } = markdownRemark;
 
+
   return <App>
     <Navigation />
-    <Post data={{...frontmatter, timeToRead}}>
-      <p
+    <Post data={{...frontmatter, timeToRead}} isFull={true}>
+      <div
         dangerouslySetInnerHTML={{ __html: html }}
       />
     </Post>
