@@ -22,6 +22,10 @@ const GlobalStyle = createGlobalStyle`
     margin-top: 0
   }
 
+  .page-content{
+
+    padding: 1rem;
+  }
 
 
   /**

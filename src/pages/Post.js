@@ -17,11 +17,13 @@ function Template({
 
   return <App>
     <Navigation />
-    <Post data={{...frontmatter, timeToRead}} isFull={true}>
-      <div
-        dangerouslySetInnerHTML={{ __html: html }}
-      />
-    </Post>
+    <div className="page-content">
+      <Post data={{...frontmatter, timeToRead}} isFull={true}>
+        <div
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
+      </Post>
+    </div>
     <Footer />
   </App>;
 }

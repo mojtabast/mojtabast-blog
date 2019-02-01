@@ -13,7 +13,9 @@ const IndexPage = ({
 
   return <App>
     <Navigation />
-    <PostsList edges={edges} />
+    <div className="page-content">
+      <PostsList edges={edges} />
+    </div>
     <Footer />
   </App>
 }
