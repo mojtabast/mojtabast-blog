@@ -19,6 +19,9 @@ const Footer = (props:PropType) => {
         <li>
           <a href="https://twitter.com/mojtabast_fa" target="_blank" rel="noopener noreferrer">توییتر</a>
         </li>
+        <li>
+          <a href="https://01.mojtabast.com/rss.xml" target="_blank" rel="noopener noreferrer">RSS</a>
+        </li>
       </ul>
   </FooterContainer_>
 }
