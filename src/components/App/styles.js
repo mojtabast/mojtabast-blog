@@ -1,41 +1,73 @@
 import {createGlobalStyle} from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
-  body{
+:root{
 
-    background: white;
-    direction: rtl;
-    text-align: right;
-    padding: 0;
-    margin: 0;
-    line-height: 1.7;
-    font-family: 'Vazir';
+  --container-width: 700px;
+}
+
+*, *:before, *:after{
+
+  box-sizing: inherit;
+}
+
+
+body{
+
+  background: white;
+  direction: rtl;
+  text-align: right;
+  padding: 0;
+  margin: 0;
+  line-height: 1.7;
+  font-family: 'Vazir';
+  box-sizing: border-box;
+}
+
+a{
+
+  text-decoration: none;
+  color: #000;
+}
+p{
+
+  margin-top: 0
+}
+
+.page-content{
+
+  padding: 1rem;
+}
+
+
+.gatsby-highlight{
+
+  border-radius: 10px;
+  background: #011627;
+  -webkit-overflow-scrolling: touch;
+  overflow: auto;
+  direction: ltr;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  margin-bottom: 1.75rem;
+}
+
+
+@media (max-width: 700px) {
+  .gatsby-highlight {
+    border-radius: 0;
   }
-
-  a{
-
-    text-decoration: none;
-    color: #000;
-  }
-  p{
-
-    margin-top: 0
-  }
-
-  .page-content{
-
-    padding: 1rem;
-  }
+}
 
 
-  /**
- * Credit: https://github.com/gaearon/overreacted.io/blob/master/src/utils/theme.css
+/**
+ * Based on copypasta from Remy Bach and Sarah Drasner
  */
-code[class*="language-"],
-pre[class*="language-"] {
+code[class*='language-'],
+pre[class*='language-'] {
   color: white;
   background: none;
-  font-family: Consolas,Menlo,Monaco,source-code-pro,Courier New,monospace;
+  font-family: Consolas, Menlo, Monaco, source-code-pro, Courier New, monospace;
   font-feature-settings: normal;
   text-align: left;
   white-space: pre;
@@ -53,42 +85,43 @@ pre[class*="language-"] {
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
-  direction: ltr;
 }
 
 /* Code blocks */
-pre[class*="language-"] {
+pre[class*='language-'] {
   overflow: auto;
-  padding: 1em;
+  padding: 1.3125rem;
 }
 
-pre[class*="language-"]::-moz-selection {
+pre[class*='language-']::-moz-selection {
   /* Firefox */
   background: hsl(207, 4%, 16%);
 }
 
-pre[class*="language-"]::selection {
+pre[class*='language-']::selection {
   /* Safari */
   background: hsl(207, 4%, 16%);
 }
 
 /* Text Selection colour */
-pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection {
+pre[class*='language-']::-moz-selection,
+pre[class*='language-'] ::-moz-selection {
   text-shadow: none;
   background: hsla(0, 0%, 100%, 0.15);
 }
 
-pre[class*="language-"]::selection, pre[class*="language-"] ::selection {
+pre[class*='language-']::selection,
+pre[class*='language-'] ::selection {
   text-shadow: none;
   background: hsla(0, 0%, 100%, 0.15);
 }
 
 /* Inline code */
-:not(pre) > code[class*="language-"] {
-  border-radius: .3em;
-  background: rgba(255,229,100,0.2);
-  color: #1a1a1a;
-  padding: .15em .2em .05em;
+:not(pre) > code[class*='language-'] {
+  border-radius: 0.3em;
+  background: var(--inlineCode-bg);
+  color: var(--inlineCode-text);
+  padding: 0.15em 0.2em 0.05em;
   white-space: normal;
 }
 
@@ -98,7 +131,7 @@ pre[class*="language-"]::selection, pre[class*="language-"] ::selection {
 }
 
 .token.comment {
-  color: rgb(99, 119, 119);
+  color: rgb(128, 147, 147);
 }
 
 .token.string,
@@ -161,22 +194,15 @@ pre[data-line] {
 .gatsby-highlight-code-line {
   background-color: hsla(207, 95%, 15%, 1);
   display: block;
-  margin-right: -1em;
-  margin-left: -1em;
+  margin-right: -1.3125rem;
+  margin-left: -1.3125rem;
   padding-right: 1em;
   padding-left: 0.75em;
   border-left: 0.25em solid #ffa7c4;
 }
 
-.gatsby-highlight {
-  margin-bottom: 1.75rem;
-  border-radius: 10px;
-  background: #011627;
-  -webkit-overflow-scrolling: touch;
-  overflow: auto;
-}
 
-.gatsby-highlight pre[class*="language-"] {
+.gatsby-highlight pre[class*='language-'] {
   float: left;
   min-width: 100%;
 }

@@ -3,7 +3,7 @@ import styled from "styled-components";
 const PostContainer_ = styled.section`
 
   margin: 0 auto 2rem auto;
-  max-width: 560px;
+  max-width: var(--container-width);
 
   & a{
     color: #DC2A2A;
