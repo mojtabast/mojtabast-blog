@@ -6,14 +6,22 @@ import Head from "../Head";
 import {GlobalStyle} from "./styles";
 
 type PropType = {
-  children: React.Node
+  children: React.Node,
+  title: string,
+  description: string,
+  link: string
 };
 
 const App = (props: PropType) => {
+  const {title, description, link} = props;
 
   return <>
     <GlobalStyle />
-    <Head />
+    <Head
+      title={title}
+      description={description}
+      link={link}
+    />
     {props.children}
   </>;
 }

@@ -15,7 +15,7 @@ function Template({
   const { frontmatter, html, timeToRead } = markdownRemark;
 
 
-  return <App>
+  return <App title={frontmatter.title} description={frontmatter.summary} link={frontmatter.path}>
     <Navigation />
     <div className="page-content">
       <Post data={{...frontmatter, timeToRead}} isFull={true}>
@@ -37,6 +37,7 @@ export const pageQuery = graphql`
         date
         path
         title
+        summary
       }
     }
   }

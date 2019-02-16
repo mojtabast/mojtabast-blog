@@ -28,4 +28,13 @@ const PostContainer_ = styled.section`
   }
 `;
 
-export {PostContainer_}
+const ShareContainer_ = styled.div`
+
+  margin-top: 1rem;
+
+  & > a{
+
+    margin-right: 8px;
+  }
+`;
+export {PostContainer_, ShareContainer_}
