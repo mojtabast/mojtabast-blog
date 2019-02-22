@@ -119,7 +119,7 @@ class ConnectedToServer extends React.Component{
   }
 
   // Runs after component is removed from DOM
-  componentWillMount(){
+  componentWillUnmount(){
 
     cancelRequest();
   }
