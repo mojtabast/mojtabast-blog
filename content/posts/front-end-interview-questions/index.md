@@ -20,11 +20,11 @@ path: "/frontend-interview-questions-javascript"
 
 و پست دوم:
 
-- Prototypes
-- Event loop
-- Async
-- Coercion
-- Types
+- [Prototypes](/frontend-interview-questions-javascript-part-2#prototypes)
+- [Async](/frontend-interview-questions-javascript-part-2#async)
+- [Event Loop & Call Stack](/frontend-interview-questions-javascript-part-2#event-loop)
+- [Types](/frontend-interview-questions-javascript-part-2#types)
+- [Coercion](/frontend-interview-questions-javascript-part-2#coercion)
 
 # <a id="scope">Scope</a>
 
