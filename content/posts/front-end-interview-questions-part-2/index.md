@@ -349,8 +349,8 @@ var d = a - b;
 console.log(c); // 122
 console.log( typeof c); // string
 
-console.log(c); // 10
-console.log( typeof c); // number
+console.log(d); // 10
+console.log( typeof d); // number
 
 ```
 
