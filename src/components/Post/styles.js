@@ -1,40 +1,39 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 const PostContainer_ = styled.section`
-
   margin: 0 auto 2rem auto;
   max-width: var(--container-width);
 
-  & a{
-    color: #DC2A2A;
+  & a {
+    color: #dc2a2a;
 
-    & > h2{
-
+    & > h2 {
       margin: 0;
-      color: #DC2A2A;
+      color: #dc2a2a;
     }
 
-    &:hover, & h2:hover{
-
-      color: #AA0000;
+    &:hover,
+    & h2:hover {
+      color: #aa0000;
     }
   }
 
-  .info{
-
+  .info {
     font-size: 0.9rem;
     color: #555;
     margin: 0.25rem 0;
   }
-`;
+
+  img {
+    max-width: 100%;
+  }
+`
 
 const ShareContainer_ = styled.div`
-
   margin-top: 1rem;
 
-  & > a{
-
+  & > a {
     margin-right: 8px;
   }
-`;
-export {PostContainer_, ShareContainer_}
+`
+export { PostContainer_, ShareContainer_ }
