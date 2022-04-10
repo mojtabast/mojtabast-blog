@@ -5,10 +5,9 @@ module.exports = {
     siteUrl: 'https://01.mojtabast.com',
     social: {
       twitter: '@mojtabast_fa',
-    }
+    },
   },
   plugins: [
-    `gatsby-plugin-flow`,
     `gatsby-plugin-styled-components`,
     'gatsby-plugin-react-helmet',
     {
@@ -22,7 +21,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/posts`,
-        name: "markdown-pages",
+        name: 'markdown-pages',
       },
     },
     {
@@ -62,7 +61,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-91434436-2",
+        trackingId: 'UA-91434436-2',
       },
     },
     {
@@ -85,22 +84,23 @@ module.exports = {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
               return allMarkdownRemark.edges.map(edge => {
                 // This hack is copied from https://github.com/gaearon/overreacted.io/blob/518683539a5cdab97c76a8efa7a1ccc6f97e6921/gatsby-config.js#L87
-                const siteUrl = site.siteMetadata.siteUrl;
-                const postURL = site.siteMetadata.siteUrl + edge.node.frontmatter.path;
-                const postText = `<div style="margin-top=55px; font-style: italic;">این پست در وبلاگ مجتباست منتشرشده که می‌تونید کاملش <a href="${postURL}">رو با کلیک روی این لینک بخونید.</a></div>`;
+                const siteUrl = site.siteMetadata.siteUrl
+                const postURL =
+                  site.siteMetadata.siteUrl + edge.node.frontmatter.path
+                const postText = `<div style="margin-top=55px; font-style: italic;">این پست در وبلاگ مجتباست منتشرشده که می‌تونید کاملش <a href="${postURL}">رو با کلیک روی این لینک بخونید.</a></div>`
 
-                let html = edge.node.html;
+                let html = edge.node.html
                 html = html
-                .replace(/href="\//g, `href="${siteUrl}/`)
-                .replace(/src="\//g, `src="${siteUrl}/`)
-                .replace(/"\/static\//g, `"${siteUrl}/static/`);
+                  .replace(/href="\//g, `href="${siteUrl}/`)
+                  .replace(/src="\//g, `src="${siteUrl}/`)
+                  .replace(/"\/static\//g, `"${siteUrl}/static/`)
 
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.summary,
                   date: edge.node.frontmatter.date,
                   url: postURL,
                   guid: postURL,
-                  custom_elements: [{ "content:encoded": html + postText }],
+                  custom_elements: [{ 'content:encoded': html + postText }],
                 })
               })
             },
@@ -125,12 +125,12 @@ module.exports = {
                 }
               }
             `,
-            output: "/rss.xml",
-            title: "Mojtabast Blog RSS Feed",
+            output: '/rss.xml',
+            title: 'Mojtabast Blog RSS Feed',
           },
         ],
       },
-    }
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',

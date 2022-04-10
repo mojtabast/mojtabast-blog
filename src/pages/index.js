@@ -1,4 +1,5 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 
 import App from '../components/App'
 import Navigation from '../components/Navigation'
@@ -10,18 +11,18 @@ const IndexPage = ({
     allMarkdownRemark: { edges },
   },
 }) => {
-
-  return <App>
-    <Navigation />
-    <div className="page-content">
-      <PostsList edges={edges} />
-    </div>
-    <Footer />
-  </App>
+  return (
+    <App>
+      <Navigation />
+      <div className="page-content">
+        <PostsList edges={edges} />
+      </div>
+      <Footer />
+    </App>
+  )
 }
 
 export default IndexPage
-
 
 export const pageQuery = graphql`
   query {
@@ -40,4 +41,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`

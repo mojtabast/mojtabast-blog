@@ -4,7 +4,7 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-const path = require("path")
+const path = require('path')
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
@@ -33,6 +33,7 @@ exports.createPages = ({ actions, graphql }) => {
 
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
       createPage({
+        pathPrefix: '/',
         path: node.frontmatter.path,
         component: blogPostTemplate,
         context: {}, // additional data can be passed via context

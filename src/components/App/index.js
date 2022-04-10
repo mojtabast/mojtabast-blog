@@ -1,29 +1,31 @@
-// @flow
+import * as React from 'react'
 
-import * as React from "react";
+import Head from '../Head'
+import { GlobalStyle } from './styles'
 
-import Head from "../Head";
-import {GlobalStyle} from "./styles";
+/**
+ *  App PropTypes
+ *
+ *  @typedef  {Object} PropType
+ *  @property {string} title
+ *  @property {string} description
+ *  @property {string} link
+ *
+ */
 
-type PropType = {
-  children: React.Node,
-  title: string,
-  description: string,
-  link: string
-};
+/**
+ * @param {PropType} props - The magic number.
+ */
+const App = props => {
+  const { title, description, link } = props
 
-const App = (props: PropType) => {
-  const {title, description, link} = props;
-
-  return <>
-    <GlobalStyle />
-    <Head
-      title={title}
-      description={description}
-      link={link}
-    />
-    {props.children}
-  </>;
+  return (
+    <>
+      <GlobalStyle />
+      <Head title={title} description={description} link={link} />
+      {props.children}
+    </>
+  )
 }
 
-export default App;
+export default App
