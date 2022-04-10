@@ -1,9 +1,11 @@
-import {createGlobalStyle} from "styled-components";
+import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
 :root{
 
   --container-width: 700px;
+  --inlineCode-bg: rgba(115, 125, 140, 0.17);
+  --inlineCode-text: #000;
 }
 
 *, *:before, *:after{
@@ -30,8 +32,28 @@ a{
   color: #000;
 }
 p{
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+h1{
+  font-size: 33px;
 
-  margin-top: 0
+}
+h2{
+  font-size: 26px;
+  margin-top: 64px;
+  margin-bottom: 16px;
+}
+h3{
+  font-size: 20px;
+  margin-top: 64px;
+  margin-bottom: 12px;
+}
+
+h4{
+  font-size: 16px;
+  margin-top: 64px;
+  margin-bottom: 8px;
 }
 
 .page-content{
@@ -121,7 +143,7 @@ pre[class*='language-'] ::selection {
   border-radius: 0.3em;
   background: var(--inlineCode-bg);
   color: var(--inlineCode-text);
-  padding: 0.15em 0.2em 0.05em;
+  padding: 0.25rem 0.25rem;
   white-space: normal;
 }
 
@@ -206,7 +228,6 @@ pre[data-line] {
   float: left;
   min-width: 100%;
 }
-`;
+`
 
-
-export {GlobalStyle};
+export { GlobalStyle }
